@@ -18,7 +18,7 @@ public class InMemoryDataBase {
             var value = db.get(index);
             return new DbResponse(DbResponseStatus.OK, value);
         } catch (Exception ex) {
-            return new DbResponse(DbResponseStatus.ERROR, "");
+            return new DbResponse(DbResponseStatus.ERROR, ex.getMessage());
         }
     }
 
@@ -28,7 +28,7 @@ public class InMemoryDataBase {
             db.set(index, value);
             return new DbResponse(DbResponseStatus.OK, "");
         } catch (Exception ex) {
-            return new DbResponse(DbResponseStatus.ERROR, "");
+            return new DbResponse(DbResponseStatus.ERROR, ex.getMessage());
         }
     }
 
@@ -38,7 +38,7 @@ public class InMemoryDataBase {
             db.remove(index);
             return new DbResponse(DbResponseStatus.OK, "");
         } catch (Exception ex) {
-            return new DbResponse(DbResponseStatus.ERROR, "");
+            return new DbResponse(DbResponseStatus.ERROR, ex.getMessage());
         }
     }
 

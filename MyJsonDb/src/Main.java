@@ -1,5 +1,7 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import Connection.Connection;
+
+
 void main() {
-    System.out.println("Hello world");
+    var connection = new Connection(23456);
+    connection.StartConnection();
 }

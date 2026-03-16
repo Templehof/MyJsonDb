@@ -1,5 +1,6 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
+import Connection.ClientConnection;
 
+void main() {
+    var connection = new ClientConnection("127.0.0.1", 23456);
+    connection.StartClientConnection();
 }
